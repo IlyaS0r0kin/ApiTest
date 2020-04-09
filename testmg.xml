@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ApiTest" parallel="methods" thread-count="4">
+    <test name="ApiTest">
+        <classes>
+             <class name="RegTest" />
+             <class name="DelTest">
+                    <methods>
+                        <include name="deleteTest" />
+                        <include name="deleteSecondTest" />
+                     </methods>
+            </class>
+            <class name="PostTest" />
+            <class name="GetTest" />
+        </classes>
+    </test>
+</suite>
